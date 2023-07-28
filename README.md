@@ -6,7 +6,7 @@ Features:
 
 - 100% free, no ads, no license needed
 - automagical AI-based playlist detection
-- fast as hek
+- fast as hek compared to other similar softwares
 
 ## Installation
 
