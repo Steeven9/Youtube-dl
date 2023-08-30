@@ -22,7 +22,6 @@ def download(url: str, convert_mp3: bool, output_path: str) -> bool:
         print(f"⛔ Skipping unreachable URL: {url}")
         return False
 
-    print(f"⏬ Downloading {video.title}")
     try:
         stream = video.streams.get_highest_resolution()
     except AgeRestrictedError:
@@ -31,6 +30,8 @@ def download(url: str, convert_mp3: bool, output_path: str) -> bool:
     except RegexMatchError:
         print(f"❌ Cannot download video: {video.title}")
         return False
+
+    print(f"⏬ Downloading {video.title}")
     filepath = stream.download(output_path=output_path, max_retries=1)
 
     if convert_mp3:

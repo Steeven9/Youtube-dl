@@ -12,7 +12,7 @@ OUTPUT_PATH = "files"
 def youtube_dl(url: str, convert_mp3: bool) -> int:
     success_count = 0
 
-    if "playlist" in url.lower():
+    if "list" in url.lower():
         playlist = Playlist(url)
         print(f"📚 Playlist: {playlist.title}")
         urls = playlist.video_urls
